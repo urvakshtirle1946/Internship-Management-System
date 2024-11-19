@@ -1,13 +1,13 @@
 import React from 'react';
 import Sidebar from './Sidebar';
-import Navbar from '../Navbar';
+import Header from './Header';
 
 const MainLayout = ({ children, links }) => {
   return (
     <div className="flex">
       <Sidebar links={links} />
       <div className="flex-grow">
-        <Navbar />
+        <Header title="Dashboard" />
         <main className="p-6">{children}</main>
       </div>
     </div>

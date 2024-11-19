@@ -1,42 +1,32 @@
-import Navbar from "../components/Navbar";
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+import AcademicProgress from '../components/dashboard/AcademicProgress';
+import InternshipTracker from '../components/dashboard/InternshipTracker';
+import ToDoList from '../components/dashboard/TodoList';
 
-const StudentDashboard = () => {
+const Dashboard = () => {
+  const links = [
+    { path: '/student', label: 'Dashboard' },
+    { path: '/student/courses', label: 'Courses' },
+    { path: '/student/reports', label: 'Reports' },
+    { path: '/student/profile', label: 'Profile' },
+    { path: '/student/settings', label: 'Settings' },
+  ];
+
   return (
-    <div className="bg-black min-h-screen">
-      <Navbar />
-      <div className="container mx-auto p-4">
-        <h2 className="text-2xl font-bold mb-4">Student Dashboard</h2>
-        <main className="mt-6">
-          <section className="bg-gray-800 p-6 rounded mb-6">
-            <h2 className="text-xl font-semibold mb-4">Submit Internship Details</h2>
-            <form className="space-y-4">
-              <input
-                type="text"
-                placeholder="Company Name"
-                className="w-full p-2 rounded bg-gray-700 text-gray-300 focus:outline-none"
-              />
-              <input
-                type="text"
-                placeholder="Company Address"
-                className="w-full p-2 rounded bg-gray-700 text-gray-300 focus:outline-none"
-              />
-              <button className="bg-blue-600 px-4 py-2 rounded hover:bg-blue-500">
-                Submit
-              </button>
-            </form>
-          </section>
-
-          <section className="bg-gray-800 p-6 rounded">
-            <h2 className="text-xl font-semibold mb-4">Uploaded Reports</h2>
-            <ul>
-              <li className="border-b border-gray-700 py-2">Fortnightly Report 1 - Approved</li>
-              <li className="border-b border-gray-700 py-2">Assignment 1 - Pending</li>
-            </ul>
-          </section>
-        </main>
+    <MainLayout title="Student Dashboard" links={links}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <AcademicProgress progress={70} />
+        <InternshipTracker
+          internships={[
+            { company: 'Google', status: 'Ongoing' },
+            { company: 'Meta', status: 'Completed' },
+          ]}
+        />
+        <ToDoList tasks={['Submit Assignment', 'Attend Workshop', 'Update Profile']} />
       </div>
-    </div>
+    </MainLayout>
   );
 };
 
-export default StudentDashboard;
+export default Dashboard;
