@@ -1,41 +1,38 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
+import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 const Home = () => {
 
   return (
     <div className={`min-h-screen bg-black text-white`}>
-      <nav className="bg-gray-800 p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Internship Orbit</h1>
-        </div>
-      </nav>
-
+      <Navbar />
       <header className="flex flex-col items-center justify-center text-center p-10 min-h-screen">
-        <img src={logo} height={220} width={220} alt="Logo" />
-        <h2 className="text-4xl font-bold mb-4">Welcome to the Internship Management System</h2>
+        <img src={logo} height={220} width={220} alt="Logo" className="mb-0" />
+        <h2 className="text-4xl font-bold mb-4 mt-0">Welcome to the Internship Management System</h2>
         <p className="text-lg mb-6">
           Streamline your internship experience with our comprehensive tracking and reporting system.
         </p>
         <div>
-          <a
-            href="/student"
+          <Link
+            to="/student"
             className="bg-green-500 dark:bg-green-700 text-white px-6 py-3 rounded-lg shadow-md mr-4"
           >
             Student Portal
-          </a>
-          <a
-            href="/mentor"
+          </Link>
+          <Link
+            to="/mentor"
             className="bg-yellow-500 dark:bg-yellow-700 text-white px-6 py-3 rounded-lg shadow-md mr-4"
           >
             Mentor Portal
-          </a>
-          <a
-            href="/admin"
+          </Link>
+          <Link
+            to="/admin"
             className="bg-red-500 dark:bg-red-700 text-white px-6 py-3 rounded-lg shadow-md"
           >
             Admin Portal
-          </a>
+          </Link>
         </div>
       </header>
 
