@@ -14,6 +14,7 @@ import MentorSettings from "./pages/mentor/Settings";
 import AdminSettings from "./pages/admin/Settings";
 import AdminReports from "./pages/admin/Reports";
 import AdminUsers from "./pages/admin/Users";
+import InternshipFrom from "./pages/student/InternshipFrom"
 
 function App() {
   return (
@@ -28,12 +29,13 @@ function App() {
         <Route path="/mentor/students" element={<Students />} />
         <Route path="/mentor/reports" element={<MentorReports />} />
         <Route path="/mentor/profile" element={<MentorProfile />} />
-        <Route path="/mentor/settings" element={<MentorSettings />} />ß
+        <Route path="/mentor/settings" element={<MentorSettings />} />
         <Route path="/student" element={<StudentDashboard />} />
         <Route path="/student/courses" element={<StudentCourses />} />
         <Route path="/student/reports" element={<StudentReports />} />
         <Route path="/student/profile" element={<StudentProfile />} />
         <Route path="/student/settings" element={<StudentSettings />} />
+        <Route path="/student/internship-form" element={<InternshipFrom />} />
       </Routes>
     </Router>
   );

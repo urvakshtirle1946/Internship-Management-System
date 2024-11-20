@@ -2,7 +2,7 @@ import React from 'react';
 
 const Table = ({ headers, data }) => {
   return (
-    <table className="w-full text-left bg-gray-800 rounded">
+    <table className="w-full text-left bg-gray-800 rounded text-white">
       <thead>
         <tr className="border-b border-gray-700">
           {headers.map((header, idx) => (

@@ -9,6 +9,7 @@ const Dashboard = () => {
     { path: '/student', label: 'Dashboard' },
     { path: '/student/courses', label: 'Courses' },
     { path: '/student/reports', label: 'Reports' },
+    { path: '/student/internship-form', label: 'Intern Form' },
     { path: '/student/profile', label: 'Profile' },
     { path: '/student/settings', label: 'Settings' },
   ];

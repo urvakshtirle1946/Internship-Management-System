@@ -5,7 +5,7 @@ import ToDoList from '../components/dashboard/TodoList';
 
 const Dashboard = () => {
   const links = [
-    { path: '/admin/dashboard', label: 'Dashboard' },
+    { path: '/admin', label: 'Dashboard' },
     { path: '/admin/users', label: 'Users' },
     { path: '/admin/reports', label: 'Reports' },
     { path: '/admin/settings', label: 'Settings' },

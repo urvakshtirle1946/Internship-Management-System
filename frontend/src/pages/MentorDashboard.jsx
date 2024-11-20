@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import MainLayout from '../components/layout/MainLayout';
 import Analytics from '../components/dashboard/AnalyticsCard';
-import ToDoList from '../components/dashboard/ToDoList';
+import ToDoList from '../components/dashboard/TodoList';
 
 const MentorDashboard = () => {
   const [reports, setReports] = useState([
@@ -13,7 +13,7 @@ const MentorDashboard = () => {
   const [feedback, setFeedback] = useState("");
 
   const links = [
-    { path: '/mentor/dashboard', label: 'Dashboard' },
+    { path: '/mentor', label: 'Dashboard' },
     { path: '/mentor/students', label: 'Students' },
     { path: '/mentor/reports', label: 'Reports' },
     { path: '/mentor/profile', label: 'Profile' },

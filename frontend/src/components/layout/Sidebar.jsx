@@ -6,7 +6,7 @@ const Sidebar = ({ links }) => {
     <aside className="bg-gray-800 p-4 w-64 h-screen">
       <ul>
         {links.map((link, idx) => (
-          <li key={idx} className="mb-4">
+          <li key={idx} className="mb-4 p-2">
             <Link to={link.path} className="text-gray-300 hover:text-white">
               {link.label}
             </Link>
